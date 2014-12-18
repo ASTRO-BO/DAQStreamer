@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 2.8 FATAL_ERROR)
 
-project (DAQStreamer1)
+project (DAQStreamer)
 
 find_package(Protobuf)
 
@@ -36,5 +36,5 @@ else()
     message(FATAL_ERROR "PacketLib not found, the CTATOOLS_SOURCE_FOLDER env variable isn't set")
 endif()
 
-add_executable(DAQStreamer1 main.cpp CameraEventStreamer.cpp DebugWorker.cpp)
-target_link_libraries(DAQStreamer1 CTAToolsCore packet protobuf)
+add_executable(DAQStreamer main.cpp CameraEventStreamer.cpp DebugWorker.cpp)
+target_link_libraries(DAQStreamer CTAToolsCore packet protobuf)
